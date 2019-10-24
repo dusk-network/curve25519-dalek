@@ -480,7 +480,7 @@ impl TryFrom<&[u8]> for Scalar {
 
 impl From<[u8; 32]> for Scalar {
     fn from(bytes: [u8; 32]) -> Self {
-        Scalar{ bytes }
+        Scalar::from_bits(bytes)
     }
 }
 
